@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Uri",
+        "email": "uri@digitalhouse.com",
+        "password": "$2b$12$nvGkBaC4eBXHbZrMsO6cMuVQPjmk9L0u0LLGME80NEwA/GosVV3GW",
+        "avatar": "uri@digitalhouse.com.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Jose",
+        "email": "jose@digitalhouse.com",
+        "password": "$2b$12$nJgRqZiJ4gRiS8T33AXXSu8q4S3olwFcABYzuTdF/xHA./lKkhfd.",
+        "avatar": "jose@digitalhouse.com.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Lando",
+        "email": "lando@digitalhouse.com",
+        "password": "$2b$12$a7NNN2uc7eB7ExD/9d0saenq83Q4TMmgAl191npq8B3Wk3UmxBhym",
+        "avatar": "lando@digitalhouse.com.jpg"
+    }
+]
