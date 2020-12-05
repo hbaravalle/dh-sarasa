@@ -1,22 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Registro</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
+    <%- include('partials/head.ejs') %>
 <body>
-    <header>
-        <span class="logo">Cambio el logo</span>
-        <nav>
-            <ul>
-                <li><a href="/users/register">Register</a></li>
-                <li><a href="/users/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <%- include('partials/header.ejs') %>
     <main>
 
         <section class="hero">
@@ -51,9 +37,6 @@
 
     </main>
 
-    <footer>
-        &copy;Digital House, 2022
-    </footer>
-    
+    <%- include('partials/footer.ejs') %>
 </body>
 </html>
