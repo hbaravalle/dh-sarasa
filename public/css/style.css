@@ -132,7 +132,7 @@ section.form form div {
     margin-bottom: 15px;
 }
 
-form div > * {
+.form-group, .form-group > * {
     width: 100%;
 }
 
@@ -144,6 +144,14 @@ form div > input {
     font-size: 16px;
     padding: 5px;
 }
+
+form div.remember {
+    position: relative;
+}
+form div.remember input {
+    margin: 4px 4px 0 0;
+}
+
 
 form button[type="submit"] {
     padding: 7px 14px;

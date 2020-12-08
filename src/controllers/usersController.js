@@ -36,5 +36,32 @@ module.exports = {
     },
     login: function(req, res) {
         res.render('login');
+    },
+    logged: function (req, res) {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let { email, password, remember } = req.body;
+            let usuarioALoguearse;
+
+            usuarios.forEach(user => {
+                if (user.email === email && bcrypt.compareSync(password, user.password)) {
+                     usuarioALoguearse = user;
+                }
+            });
+
+            if (usuarioALoguearse == undefined) {
+                return res.send('Credenciales invalidas');
+            } 
+
+            req.session.user = usuarioALoguearse;
+            return res.redirect('/');
+
+        } else {
+            return res.send(errors.mapped());
+        }
+
+    },
+    profile: function (req, res) {
+
     }
 }
