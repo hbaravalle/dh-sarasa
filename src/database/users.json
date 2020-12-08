@@ -19,5 +19,12 @@
         "email": "lando@digitalhouse.com",
         "password": "$2b$12$a7NNN2uc7eB7ExD/9d0saenq83Q4TMmgAl191npq8B3Wk3UmxBhym",
         "avatar": "lando@digitalhouse.com.jpg"
+    },
+    {
+        "id": 4,
+        "name": "usosa",
+        "email": "u@mail.com",
+        "password": "$2b$12$L9rk8O2yZLcqtf47BCZvdOJdRQhR.bPHGIGriJ27y.Jjo9KDs7Ef6",
+        "avatar": "u@mail.com.jpg"
     }
 ]

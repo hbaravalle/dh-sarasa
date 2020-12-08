@@ -39,8 +39,8 @@ module.exports = {
     },
     logged: function (req, res) {
         let errors = validationResult(req);
+        let { email, password, remember } = req.body;
         if (errors.isEmpty()) {
-            let { email, password, remember } = req.body;
             let usuarioALoguearse;
 
             usuarios.forEach(user => {
@@ -54,6 +54,10 @@ module.exports = {
             } 
 
             req.session.user = usuarioALoguearse;
+
+            if (remember != undefined) {
+                res.cookie('remember', usuarioALoguearse.email, { maxAge: 60000 });
+            }
             return res.redirect('/');
 
         } else {
@@ -62,6 +66,6 @@ module.exports = {
 
     },
     profile: function (req, res) {
-
+        return res.send('perfil');
     }
 }
