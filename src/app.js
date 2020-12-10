@@ -7,6 +7,8 @@ const app = express();
 
 const usersRouter = require('./routes/users');
 const indexRouter = require('./routes/index');
+const adminRouter = require('./routes/admin');
+const productsRouter = require('./routes/products');
 
 app.use(session( { secret: 'sarasa-milanesa' } ));
 app.use(express.urlencoded({extended : false}));
@@ -20,6 +22,8 @@ app.set('view engine' , 'ejs')
 app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', indexRouter);
+app.use('/admin', adminRouter);
+app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 
 app.listen(3000, function() {

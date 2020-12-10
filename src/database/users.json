@@ -26,5 +26,12 @@
         "email": "u@mail.com",
         "password": "$2b$12$L9rk8O2yZLcqtf47BCZvdOJdRQhR.bPHGIGriJ27y.Jjo9KDs7Ef6",
         "avatar": "u@mail.com.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Edu",
+        "email": "edu@dh.com",
+        "password": "$2b$12$E9QZ/celwQTDxpiU57.vLuMxxXSpEQLMV1H0smamfjTKghkUwe6NK",
+        "avatar": "edu@dh.com.jpg"
     }
 ]
