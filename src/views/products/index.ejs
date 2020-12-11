@@ -9,44 +9,17 @@
         <section class="hero">
             <h1>Productos</h1>
         </section>
-
         <section class="cards">
-            <article>
-                <h2>Ad lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid perferendis dignissimos repellendus
-                    ipsa dolore nulla unde, quis error maiores odio?</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <h2>Ad lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid perferendis dignissimos repellendus
-                    ipsa dolore nulla unde, quis error maiores odio?</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <h2>Ad lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid perferendis dignissimos repellendus
-                    ipsa dolore nulla unde, quis error maiores odio?</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <h2>Ad lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid perferendis dignissimos repellendus
-                    ipsa dolore nulla unde, quis error maiores odio?</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <h2>Ad lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid perferendis dignissimos repellendus
-                    ipsa dolore nulla unde, quis error maiores odio?</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <h2>Ad lorem ipsum</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid perferendis dignissimos repellendus
-                    ipsa dolore nulla unde, quis error maiores odio?</p>
-                <button>Más info</button>
-            </article>
+            
+            <% productos.forEach(producto => { %>
+                <article>
+                    <img src="/img/products/<%= producto.image %>" alt="" width="100px" height="100px">
+                    <h2><%= producto.name %></h2>
+                    <p><%= producto.detail %></p>
+                    <a href="/products/<%= producto.id %>">Ir a la info</a>
+                </article>
+            <% }) %>
+
         </section>
 
     </main>

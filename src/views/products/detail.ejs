@@ -7,20 +7,24 @@
     <main>
 
         <section class="hero">
-            <h1>Macbook pro</h1>
+            <h1><%= producto.name %></h1>
         </section>
 
         <section class="detail">
             <div class="img-product">
                 <img src="https://icdn2.digitaltrends.com/image/digitaltrends_es/apple-macbook-pro-16-ry-14.jpg" alt="producto">
             </div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, aspernatur?</p>
+            <p><%= producto.detail %></p>
             <strong>$ 10.99</strong>
             <small>$ 11.5 </small>
         </section>
         <section class="buttons">
-            <a href="">EDITAR</a>
-            <a href="">ELIMINAR</a>
+            <a href="/admin/products/<%= producto.name %>">EDITAR</a>
+            
+            <form action="/admin/products/<%= producto.id %>?_method=DELETE" method="POST">
+                <input type="hidden" value="<%= producto.id %>">
+                <button type="submit">ELIMINAR</button>
+            </form>
         </section>
     </main>
 

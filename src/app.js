@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');
+
 const rememberMiddleware = require('./middlewares/rememberMiddleware');
 const app = express();
 
@@ -14,6 +16,7 @@ app.use(session( { secret: 'sarasa-milanesa' } ));
 app.use(express.urlencoded({extended : false}));
 app.use(express.json());
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 app.use(rememberMiddleware);
 
 app.use(express.static(path.join(__dirname, '../public')));
